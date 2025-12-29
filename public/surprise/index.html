@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hand Gestures: Victory & Shapes</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #050505;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* UI Overlay */
+        #ui {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        #start-btn {
+            pointer-events: auto;
+            background: #00ffcc;
+            color: #000;
+            border: none;
+            padding: 15px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+            transition: transform 0.2s;
+        }
+
+        #start-btn:hover {
+            transform: scale(1.05);
+            background: #fff;
+        }
+
+        #hud {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #00ffcc;
+            display: none;
+            /* Hidden until started */
+        }
+
+        h3 {
+            margin: 0 0 5px 0;
+            color: #00ffcc;
+        }
+
+        p {
+            margin: 2px 0;
+            font-size: 14px;
+        }
+
+        /* Camera Preview - Mirrored */
+        #cam-container {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            opacity: 0.6;
+            border: 2px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scaleX(-1);
+            display: none;
+            /* Hidden until started */
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #loader {
+            position: absolute;
+            bottom: 100px;
+            color: #00ffcc;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="ui">
+        <button id="start-btn" onclick="initSystem()">START SYSTEM</button>
+        <div id="loader">Loading AI Model...</div>
+    </div>
+
+    <div id="hud">
+        <h3>✨ SYSTEM ACTIVE</h3>
+        <p>✊ <b>Fist:</b> Next Shape</p>
+        <p>✌️ <b>Victory:</b> "MOMMY"</p>
+        <p>🤏 <b>Pinch:</b> Interact</p>
+        <div style="margin-top:10px; font-weight:bold; color:#fff" id="status-text">Initializing...</div>
+    </div>
+
+    <div id="cam-container">
+        <video id="input_video" playsinline muted></video>
+    </div>
+
+    <script type="module">
+        import * as THREE from 'https://unpkg.com/three@0.136.0/build/three.module.js';
+
+        // --- CONFIG ---
+        const PARTICLE_COUNT = 12000;
+
+        // --- VARIABLES ---
+        let camera, scene, renderer;
+        let particles, geometry;
+        let positions, targets, colors;
+        let currentShape = 'cloud';
+        let isPinched = false, pinchStrength = 0;
+        let handPos = new THREE.Vector3(0, 0, 0);
+        let lastGestureTime = 0;
+
+        // --- 1. TEXTURE GENERATOR (Pixel Art Text) ---
+        function generateTextPoints(text) {
+            const canvas = document.createElement('canvas');
+            const size = 512;
+            canvas.width = size; canvas.height = size / 2;
+            const ctx = canvas.getContext('2d');
+
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, size, size / 2);
+
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 80px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(text, size / 2, size / 4);
+
+            const imgData = ctx.getImageData(0, 0, size, size / 2);
+            const data = imgData.data;
+            const points = [];
+
+            // Scan pixels
+            for (let y = 0; y < size / 2; y += 4) {
+                for (let x = 0; x < size; x += 4) {
+                    const alpha = data[(y * size + x) * 4];
+                    if (alpha > 128) {
+                        const px = (x / size - 0.5) * 40;
+                        const py = -(y / (size / 2) - 0.5) * 20;
+                        points.push({ x: px, y: py, z: 0 });
+                    }
+                }
+            }
+            return points;
+        }
+        const textPoints = generateTextPoints("I LOVE YOU");
+
+        // --- 2. SHAPE GENERATOR ---
+        function updateTargets(shapeType) {
+            for (let i = 0; i < PARTICLE_COUNT; i++) {
+                let x, y, z;
+                const i3 = i * 3;
+
+                if (shapeType === 'text') {
+                    const pt = textPoints[i % textPoints.length];
+                    x = pt.x + (Math.random() - 0.5) * 0.2;
+                    y = pt.y + (Math.random() - 0.5) * 0.2;
+                    z = pt.z;
+                }
+                else if (shapeType === 'heart') {
+                    const t = Math.random() * Math.PI * 2;
+                    x = 16 * Math.pow(Math.sin(t), 3);
+                    y = 13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t);
+                    z = (Math.random() - 0.5) * 6;
+                    x *= 0.5; y *= 0.5; y += 2;
+                }
+                else if (shapeType === 'sphere') {
+                    const r = 8;
+                    const theta = Math.random() * Math.PI * 2;
+                    const phi = Math.acos((Math.random() * 2) - 1);
+                    x = r * Math.sin(phi) * Math.cos(theta);
+                    y = r * Math.sin(phi) * Math.sin(theta);
+                    z = r * Math.cos(phi);
+                }
+                else { // Cloud
+                    x = (Math.random() - 0.5) * 30;
+                    y = (Math.random() - 0.5) * 20;
+                    z = (Math.random() - 0.5) * 10;
+                }
+
+                targets[i3] = x;
+                targets[i3 + 1] = y;
+                targets[i3 + 2] = z;
+            }
+        }
+
+        // --- 3. INIT THREE.JS ---
+        function initThree() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 25;
+
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+            renderer.domElement.style.position = 'absolute';
+            renderer.domElement.style.top = '0';
+            renderer.domElement.style.zIndex = '0';
+
+            geometry = new THREE.BufferGeometry();
+            positions = new Float32Array(PARTICLE_COUNT * 3);
+            targets = new Float32Array(PARTICLE_COUNT * 3);
+            colors = new Float32Array(PARTICLE_COUNT * 3);
+
+            for (let i = 0; i < PARTICLE_COUNT; i++) {
+                positions[i * 3] = (Math.random() - 0.5) * 50;
+                positions[i * 3 + 1] = (Math.random() - 0.5) * 50;
+                positions[i * 3 + 2] = (Math.random() - 0.5) * 50;
+                colors[i * 3] = 0.2; colors[i * 3 + 1] = 0.8; colors[i * 3 + 2] = 1.0;
+            }
+
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+            updateTargets('cloud');
+
+            // Dot Texture
+            const canvas = document.createElement('canvas');
+            canvas.width = 32; canvas.height = 32;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#fff';
+            ctx.beginPath(); ctx.arc(16, 16, 14, 0, Math.PI * 2); ctx.fill();
+            const tex = new THREE.Texture(canvas); tex.needsUpdate = true;
+
+            const material = new THREE.PointsMaterial({
+                size: 0.35, map: tex, vertexColors: true,
+                transparent: true, opacity: 0.8, blending: THREE.AdditiveBlending, depthWrite: false
+            });
+
+            particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+
+            animate();
+        }
+
+        // --- 4. ANIMATION LOOP ---
+        function animate() {
+            requestAnimationFrame(animate);
+
+            const pos = geometry.attributes.position.array;
+            const col = geometry.attributes.color.array;
+
+            // Snappy for text, Flowy for shapes
+            const speed = (currentShape === 'text') ? 0.12 : 0.05;
+
+            for (let i = 0; i < PARTICLE_COUNT; i++) {
+                const ix = i * 3, iy = i * 3 + 1, iz = i * 3 + 2;
+
+                // Move to Target
+                pos[ix] += (targets[ix] - pos[ix]) * speed;
+                pos[iy] += (targets[iy] - pos[iy]) * speed;
+                pos[iz] += (targets[iz] - pos[iz]) * speed;
+
+                // Hand Interaction
+                const dx = pos[ix] - handPos.x;
+                const dy = pos[iy] - handPos.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                // Explode logic
+                if (pinchStrength > 0.1) {
+                    if (dist < 5) {
+                        const force = (5 - dist) * pinchStrength * 0.15;
+                        pos[ix] += dx * force;
+                        pos[iy] += dy * force;
+                        col[ix] = 1; col[iy] = 0.2; col[iz] = 0.2; // Reddish
+                    }
+                } else {
+                    // Color Restoration
+                    if (currentShape === 'text') {
+                        col[ix] += (1.0 - col[ix]) * 0.1; // White/Pink
+                        col[iy] += (0.6 - col[iy]) * 0.1;
+                        col[iz] += (0.8 - col[iz]) * 0.1;
+                    } else if (currentShape === 'heart') {
+                        col[ix] += (1.0 - col[ix]) * 0.05; // Red
+                        col[iy] += (0.0 - col[iy]) * 0.05;
+                        col[iz] += (0.0 - col[iz]) * 0.05;
+                    } else {
+                        col[ix] += (0.2 - col[ix]) * 0.05; // Cyan
+                        col[iy] += (0.8 - col[iy]) * 0.05;
+                        col[iz] += (1.0 - col[iz]) * 0.05;
+                    }
+                }
+            }
+            geometry.attributes.position.needsUpdate = true;
+            geometry.attributes.color.needsUpdate = true;
+
+            if (currentShape !== 'text') {
+                particles.rotation.y += 0.002;
+            } else {
+                particles.rotation.y += (0 - particles.rotation.y) * 0.1;
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        // --- 5. MEDIAPIPE LOGIC ---
+        const statusText = document.getElementById('status-text');
+        const shapeList = ['cloud', 'sphere', 'heart'];
+        let shapeIdx = 0;
+
+        function onResults(results) {
+            if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
+                const lm = results.multiHandLandmarks[0];
+
+                // Position Mapping
+                const x = (0.5 - lm[9].x) * 35;
+                const y = (0.5 - lm[9].y) * 25;
+                handPos.lerp(new THREE.Vector3(x, y, 0), 0.2);
+
+                // Pinch (Thumb 4 - Index 8)
+                const dPinch = Math.hypot(lm[4].x - lm[8].x, lm[4].y - lm[8].y);
+                isPinched = dPinch < 0.05;
+                pinchStrength = isPinched ? Math.min(pinchStrength + 0.1, 1) : Math.max(pinchStrength - 0.1, 0);
+
+                // GESTURES
+                const w = lm[0];
+                const dIndex = Math.hypot(lm[8].x - w.x, lm[8].y - w.y);
+                const dMiddle = Math.hypot(lm[12].x - w.x, lm[12].y - w.y);
+                const dRing = Math.hypot(lm[16].x - w.x, lm[16].y - w.y);
+                const dPinky = Math.hypot(lm[20].x - w.x, lm[20].y - w.y);
+
+                // DEFINING FLAGS HERE TO AVOID REFERENCE ERROR
+                const isVictoryNow = (dIndex > 0.3 && dMiddle > 0.3) && (dRing < 0.25 && dPinky < 0.25);
+                let isFistNow = false;
+
+                if (isVictoryNow) {
+                    if (currentShape !== 'text') {
+                        currentShape = 'text';
+                        updateTargets('text');
+                        statusText.innerText = "✌️ VICTORY: I LOVE YOU";
+                        statusText.style.color = "#ff69b4";
+                    }
+                } else {
+                    // Check Fist
+                    isFistNow = dIndex < 0.25 && dMiddle < 0.25 && dRing < 0.25 && dPinky < 0.25;
+
+                    if (isFistNow && (Date.now() - lastGestureTime > 1500)) {
+                        shapeIdx = (shapeIdx + 1) % shapeList.length;
+                        currentShape = shapeList[shapeIdx];
+                        updateTargets(currentShape);
+                        lastGestureTime = Date.now();
+                        statusText.innerText = "✊ FIST: " + currentShape.toUpperCase();
+                        statusText.style.color = "#00ffcc";
+                    }
+                }
+
+                if (!isVictoryNow && !isPinched && !isFistNow) {
+                    statusText.innerText = "🖐 Hand Active";
+                    statusText.style.color = "#fff";
+                }
+
+            } else {
+                statusText.innerText = "Waiting for Hand...";
+            }
+        }
+
+        // --- SYSTEM START ---
+        window.initSystem = async function () {
+            const btn = document.getElementById('start-btn');
+            const loader = document.getElementById('loader');
+
+            btn.style.display = 'none';
+            loader.style.display = 'block';
+
+            if (typeof Hands === 'undefined') {
+                alert("Error: MediaPipe not loaded. Check internet connection.");
+                return;
+            }
+
+            const hands = new Hands({
+                locateFile: (file) => {
+                    return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
+                }
+            });
+
+            hands.setOptions({
+                maxNumHands: 1,
+                modelComplexity: 1,
+                minDetectionConfidence: 0.5,
+                minTrackingConfidence: 0.5
+            });
+            hands.onResults(onResults);
+
+            const videoElement = document.getElementById('input_video');
+            const cam = new Camera(videoElement, {
+                onFrame: async () => { await hands.send({ image: videoElement }); },
+                width: 640, height: 480
+            });
+
+            await cam.start();
+
+            loader.style.display = 'none';
+            document.getElementById('hud').style.display = 'block';
+            document.getElementById('cam-container').style.display = 'block';
+
+            initThree();
+        };
+
+        window.addEventListener('resize', () => {
+            if (camera) {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+        });
+    </script>
+</body>
+
+</html>
