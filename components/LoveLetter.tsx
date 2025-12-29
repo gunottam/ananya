@@ -150,10 +150,7 @@ export default function LoveLetter() {
                 </div>
             </div>
 
-            {/* Import the font in your global CSS or layout, or use this style tag for now */}
-            <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
-      `}</style>
+            {/* Font is imported globally in app/globals.css */}
         </section>
     );
 }
