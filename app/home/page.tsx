@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -9,6 +9,7 @@ import PrincessSection from "@/components/PrincessSection";
 import LoveLetter from "@/components/LoveLetter";
 import CTAButton from "@/components/CTAButton";
 import Footer from "@/components/Footer";
+import { useMusic } from "@/components/MusicProvider";
 
 // --- COMPONENTS ---
 
@@ -22,22 +23,6 @@ const ScrollProgress = () => {
     );
 };
 
-const BackgroundMusic = ({ start }: { start: boolean }) => {
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-
-    useEffect(() => {
-        if (start && audioRef.current) {
-            audioRef.current.volume = 0.4; // Soft volume
-            audioRef.current.play().catch((e) => console.log("Audio play failed", e));
-        }
-    }, [start]);
-
-    return (
-        <audio ref={audioRef} loop>
-            <source src="/music.mp3" type="audio/mp3" />
-        </audio>
-    );
-};
 
 const IntroOverlay = ({ onEnter }: { onEnter: () => void }) => {
     return (
@@ -89,6 +74,7 @@ const SectionWrapper = ({ children, delay = 0 }: { children: React.ReactNode; de
 export default function HomePage() {
     const [hasStarted, setHasStarted] = useState(false);
     const { scrollYProgress } = useScroll();
+    const music = useMusic();
 
     // Parallax Background transforms
     const y1 = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
@@ -106,10 +92,8 @@ export default function HomePage() {
     return (
         <>
             <AnimatePresence>
-                {!hasStarted && <IntroOverlay onEnter={() => setHasStarted(true)} />}
+                {!hasStarted && <IntroOverlay onEnter={() => { setHasStarted(true); music.start(); }} />}
             </AnimatePresence>
-
-            <BackgroundMusic start={hasStarted} />
 
             {/* Main Content */}
             <main className="min-h-screen relative overflow-hidden bg-[#fff0f5]">

@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
+import { MusicProvider } from "@/components/MusicProvider";
 
 export const metadata: Metadata = {
   title: "Happy Birthday",
   description: "A special birthday celebration",
+  icons: {
+    icon: "/gift.png",
+    shortcut: "/gift.png",
+    apple: "/gift.png",
+  },
 };
 
 export default function RootLayout({
@@ -16,7 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <Cursor />
-        {children}
+        <MusicProvider>
+          {children}
+        </MusicProvider>
       </body>
     </html>
   );

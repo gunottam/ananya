@@ -3,6 +3,21 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { useMusic } from "@/components/MusicProvider";
+
+const MusicToggle = () => {
+    const { isPlaying, toggle } = useMusic();
+
+    return (
+        <button
+            onClick={toggle}
+            aria-label={isPlaying ? "Pause music" : "Play music"}
+            className="px-3 py-1 rounded-full bg-white/20 hover:bg-white/30 text-sm text-gray-700 flex items-center gap-2"
+        >
+            {isPlaying ? <span>🔊</span> : <span>🔈</span>}
+        </button>
+    );
+};
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -63,6 +78,9 @@ export default function Navbar() {
                             </Link>
                         );
                     })}
+
+                    {/* Music toggle */}
+                    <MusicToggle />
                 </div>
             </motion.div>
         </nav>
