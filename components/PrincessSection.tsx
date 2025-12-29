@@ -109,7 +109,7 @@ export default function PrincessSection() {
                     className="space-y-4"
                 >
                     <p className="text-xl md:text-2xl text-gray-600 font-serif italic">
-                        "You don't need a crown to rule my heart."
+                        &quot;You don&apos;t need a crown to rule my heart.&quot;
                     </p>
                     <div className="w-16 h-[1px] bg-yellow-400/50 mx-auto my-6" />
                     <p className="text-lg md:text-lg text-gray-500 leading-relaxed max-w-lg mx-auto">

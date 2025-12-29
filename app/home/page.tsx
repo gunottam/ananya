@@ -41,7 +41,7 @@ const IntroOverlay = ({ onEnter }: { onEnter: () => void }) => {
                     For the best experience
                 </p>
                 <h1 className="text-3xl md:text-4xl font-serif italic text-rose-100">
-                    "Please put on your headphones..."
+                    &quot;Please put on your headphones...&quot;
                 </h1>
 
                 <motion.button
@@ -147,7 +147,7 @@ export default function HomePage() {
                                     transition={{ duration: 2 }}
                                     className="text-2xl md:text-4xl font-serif italic text-rose-900/60"
                                 >
-                                    "In every universe, I would still choose you."
+                                    &quot;In every universe, I would still choose you.&quot;
                                 </motion.p>
                             </div>
                         </SectionWrapper>

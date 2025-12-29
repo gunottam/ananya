@@ -29,7 +29,7 @@ export default function Footer() {
 
                 {/* The Promise */}
                 <p className="font-serif text-xl md:text-2xl text-rose-900/80 italic mb-4 tracking-wide">
-                    "Created with every beat of my heart, just for you."
+                    &quot;Created with every beat of my heart, just for you.&quot;
                 </p>
 
                 {/* The Signature */}

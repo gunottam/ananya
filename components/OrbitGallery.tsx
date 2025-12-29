@@ -42,7 +42,7 @@ export default function OrbitGallery({
         return () => {
             if (requestRef.current) cancelAnimationFrame(requestRef.current);
         };
-    }, [activeIndex, isHoveringCenter, orbitItems.length]);
+    }, [activeIndex, isHoveringCenter, orbitItems]);
 
     const centerScale = isHoveringCenter ? 1.4 : (activeIndex !== null ? 0.9 : 1);
     const centerFilter = isHoveringCenter

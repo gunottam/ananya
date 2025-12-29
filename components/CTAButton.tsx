@@ -17,7 +17,7 @@ export default function CTAButton() {
                 >
                     {/* Gentle Lead-in Text */}
                     <p className="font-serif text-xl md:text-2xl text-gray-500 italic mb-8 opacity-80">
-                        "Every picture tells a part of our story..."
+                        &quot;Every picture tells a part of our story...&quot;
                     </p>
 
                     <Link href="/memories" className="relative group">

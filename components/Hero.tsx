@@ -115,7 +115,7 @@ export default function RomanticHero({ name = "My Love" }: { name?: string }) {
                     transition={{ duration: 1, delay: 0.8 }}
                     className="text-lg md:text-2xl text-rose-800/90 max-w-xl mx-auto leading-relaxed font-serif italic"
                 >
-                    "You are the greatest gift life has ever given me. Today, I celebrate the incredible person you are, and another year of loving you more than the last."
+                    &quot;You are the greatest gift life has ever given me. Today, I celebrate the incredible person you are, and another year of loving you more than the last.&quot;
                 </motion.p>
             </motion.div>
         </section>
