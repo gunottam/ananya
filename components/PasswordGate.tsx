@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
-const CORRECT_PASSWORD = "ananya";
+const CORRECT_PASSWORD = "iloveyourcock";
 
 export default function PasswordGate() {
     const [password, setPassword] = useState("");
