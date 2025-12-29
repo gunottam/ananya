@@ -75,7 +75,7 @@ export default function MemoriesPage() {
 
             {/* --- CREATIVE LAYER 1: FILM GRAIN TEXTURE --- */}
             <div className="fixed inset-0 pointer-events-none z-[5] opacity-30 mix-blend-multiply">
-                <div className="w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] animate-pulse" />
+                <div className="w-full h-full bg-[url('/textures/stardust.svg')] animate-pulse" />
             </div>
 
             {/* --- CREATIVE LAYER 2: SHIFTING AURORA BACKGROUND --- */}

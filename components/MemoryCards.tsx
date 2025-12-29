@@ -59,7 +59,7 @@ export default function MemoryCards() {
     return (
         <section className="py-24 px-4 relative overflow-hidden bg-[#fff5f5]">
             {/* Background ambience */}
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/snow.png')] opacity-40 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-[url('/textures/snow.svg')] opacity-40 mix-blend-multiply" />
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white via-transparent to-rose-50 pointer-events-none" />
 
             <div className="max-w-6xl mx-auto relative z-10">

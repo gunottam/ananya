@@ -98,7 +98,7 @@ export default function HomeClient() {
         {/* --- GLOBAL CINEMATIC BACKGROUND --- */}
         <div className="fixed inset-0 z-0 pointer-events-none">
           {/* Film Grain */}
-          <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/noise.png')] mix-blend-overlay" />
+          <div className="absolute inset-0 opacity-[0.03] bg-[url('/textures/noise.svg')] mix-blend-overlay" />
 
           {/* Moving Clouds / Fog Layers (Parallax) */}
           <motion.div style={{ y: y1 }} className="absolute inset-0 opacity-40">

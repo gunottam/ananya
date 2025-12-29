@@ -26,7 +26,7 @@ export default function LoveLetter() {
     return (
         <section className="py-24 px-4 min-h-screen flex items-center justify-center bg-[#fdf2f8] relative overflow-hidden">
             {/* Background Ambience */}
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20" />
+            <div className="absolute inset-0 bg-[url('/textures/cubes.svg')] opacity-20" />
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-rose-100/50 via-transparent to-rose-200/30 pointer-events-none" />
 
             <div className="max-w-2xl w-full mx-auto relative z-10 perspective-1000">
@@ -75,7 +75,7 @@ export default function LoveLetter() {
                                 >
                                     <div className="w-20 h-20 bg-red-700 rounded-full shadow-lg flex items-center justify-center border-4 border-red-800/50 relative overflow-hidden">
                                         {/* Wax Texture */}
-                                        <div className="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/stucco.png')]" />
+                                        <div className="absolute inset-0 opacity-30 bg-[url('/textures/stucco.svg')]" />
                                         <span className="text-3xl text-red-900/80 font-serif font-bold">A</span>
                                     </div>
                                     <motion.p
@@ -98,7 +98,7 @@ export default function LoveLetter() {
                                 className="bg-[#fffdf7] w-full p-8 md:p-12 rounded-sm shadow-xl relative"
                                 style={{
                                     // Paper texture and realistic shadow
-                                    backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')",
+                                    backgroundImage: "url('/textures/cream-paper.svg')",
                                     boxShadow: "0 10px 30px rgba(0,0,0,0.1), 0 1px 0 rgba(255,255,255,1) inset"
                                 }}
                             >
@@ -116,7 +116,7 @@ export default function LoveLetter() {
                                         autoFocus
                                         className="w-full bg-transparent resize-none focus:outline-none text-gray-700 leading-loose text-xl md:text-2xl"
                                         style={{
-                                            fontFamily: "'Dancing Script', cursive", // Ensure you have this font or a similar cursive one loaded
+                                            fontFamily: "var(--font-script), cursive", // Uses next/font variable --font-script provided in layout.tsx
                                             minHeight: "400px",
                                         }}
                                     />

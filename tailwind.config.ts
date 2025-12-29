@@ -63,12 +63,12 @@ const config: Config = {
   		},
   		fontFamily: {
   			serif: [
-  				'Playfair Display"',
+  				"var(--font-serif)",
   				'Georgia',
   				'serif'
   			],
   			sans: [
-  				'Inter"',
+  				"var(--font-sans)",
   				'system-ui',
   				'sans-serif'
   			]

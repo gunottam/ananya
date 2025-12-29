@@ -2,19 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&family=Dancing+Script:wght@400;600;700&family=Kalam:wght@300;400;700&display=swap');
+/* Fonts are provided by next/font/google in app/layout.tsx for optimal production loading */
 
 @layer base {
   body {
     @apply font-sans text-gray-800;
   }
-  
+
   /* Hide default cursor when custom cursor is active */
   body.custom-cursor-active * {
     cursor: none !important;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
   :root {
@@ -74,44 +79,48 @@
 
 @layer utilities {
   .bg-gradient-radial {
-    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 70%
+    );
   }
-  
+
   .glassmorphism {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
+
   .glassmorphism-strong {
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
-  
+
   .text-glow {
     text-shadow: 0 0 20px rgba(244, 208, 63, 0.5);
   }
-  
+
   .soft-glow {
     box-shadow: 0 0 30px rgba(232, 213, 255, 0.3);
   }
-  
+
   .perspective-distant {
     perspective: 1000px;
   }
-  
+
   .perspective-1000 {
     perspective: 1000px;
     perspective-origin: center center;
   }
-  
+
   .transform-3d {
     transform-style: preserve-3d;
   }
-  
+
   /* Responsive orbit positioning for desktop */
   @media (min-width: 768px) {
     .orbit-item {
@@ -126,8 +135,6 @@
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
@@ -136,4 +143,3 @@
     @apply bg-background text-foreground;
   }
 }
-
