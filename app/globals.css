@@ -9,6 +9,11 @@
     @apply font-sans text-gray-800;
   }
   
+  /* Hide default cursor when custom cursor is active */
+  body.custom-cursor-active * {
+    cursor: none !important;
+  }
+  
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
@@ -98,8 +103,26 @@
     perspective: 1000px;
   }
   
+  .perspective-1000 {
+    perspective: 1000px;
+    perspective-origin: center center;
+  }
+  
   .transform-3d {
     transform-style: preserve-3d;
+  }
+  
+  /* Responsive orbit positioning for desktop */
+  @media (min-width: 768px) {
+    .orbit-item {
+      transform: translate3d(
+        calc(var(--desktop-x) * 1px),
+        0,
+        calc(var(--desktop-z) * 1px)
+      ) !important;
+      margin-left: -56px !important; /* Half of md:w-28 (112px / 2) */
+      margin-top: -56px !important;
+    }
   }
 }
 
