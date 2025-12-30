@@ -1,113 +1,110 @@
-# ✨ The Glow Protocol: v1.0
-### *Automated Desi Skincare for Oily–Combination Skin*
+# ✨ The Glow Protocol: Sensitive Edition (V2.0)
+### *Non-Comedogenic (Zero Clog) • Oil-Free • Acid-Free*
 
-**Target:** Repair barrier, remove tan, natural glass skin.  
-**Tech Stack:** 100% Natural, Ayurvedic, Science-Backed.  
-**Effort Level:** Low (With Batch Prep).
+**Target:** Clear "Glass Skin" without breakouts or irritation.  
+**Strict Rule:** 🚫 NO Oils. 🚫 NO Acidic Fruits (Lemon/Tomato).  
+**Tech Stack:** 100% Water-Based Hydration & Enzymatic Brightening.
 
-> **💖 For You:** > I’ve organized this so you don't have to be a chemist every morning. Spend 20 minutes on Sunday to make the **Master Jars**, and your daily routine becomes a 2-minute task.
+> **💖 For You:** > Since your skin is sensitive and clogs easily, this routine uses "Hydro-Glow" logic: We use moisture (Aloe/Milk) instead of grease (Oils), and Enzymes (Potato) instead of Acids (Tomato).
 
 ---
 
 ## 🏗️ The "Master Batches" (Do This Once a Month)
 
-Stop mixing powders daily. Make these two jars and store them in the bathroom.
+Prepare these two jars to save time.
 
-### 🏺 Jar A: The Daily Cleanser Mix (Ubtan)
-*Use this every morning instead of face wash.*
+### 🏺 Jar A: The Gentle Wash (Soap-Free)
+*Use this daily to cleanse without stripping.*
 
 * **2 Cups** Besan (Gram Flour)
-* **1 Teaspoon** Wild Turmeric (Kasthuri Manjal) – *Regular kitchen turmeric stains; wild doesn't.*
-* **Optional:** 2 Tbsp Dried Neem Powder (if acne-prone) or Sandalwood Powder (for fragrance/cooling).
-* **Instructions:** Mix all powders dry. Store in an airtight glass jar. Keep away from water.
+* **1 Teaspoon** Wild Turmeric (Kasthuri Manjal)
+* **1/2 Cup** Sandalwood Powder (Chandan) – *Crucial addition: It cools the skin and prevents acne.*
+* **Instructions:** Mix dry. Store in an airtight jar. Keep 100% dry.
 
-### 🏺 Jar B: The "Glass Skin" Scrub Base
-*Use this 2x a week for exfoliation.*
+### 🏺 Jar B: The Soft Polish
+*Use 2x a week for texture.*
 
-* **1 Cup** Rolled Oats (Grind them slightly in a mixer so they are coarse powder, not flour).
-* **1/2 Cup** Red Lentil (Masoor Dal) Powder (Optional - adds polishing effect).
+* **1 Cup** Rolled Oats (Ground to a coarse powder).
+* **2 Tbsp** Rice Flour (Optional: Helps with glass skin texture).
 * **Instructions:** Mix dry. Store in a jar.
 
 ---
 
-## ☀️ Morning Routine (Protection Phase)
+## ☀️ Morning Routine (Protect)
 
-### 1. The 60-Second Cleanse 📦
+### 1. The Milk Cleanse 📦
 * Take **1 tsp from Jar A**.
-* Mix with **Water** (oily days) or **Raw Milk** (dry/dull days) in your palm.
-* Massage face for 60 seconds.
-* **Hack:** Wipe off with a damp towel/cloth for extra smoothness.
+* Mix with **Cold Water** or **Rose Water**.
+* Massage gently.
+* **Why:** Besan pulls out the excess sebum (oil) produced overnight without clogging pores.
 
-### 2. Tone & Reset
-* Spray **Rose Water** generously. Let it air dry.
+### 2. Pore Tightening
+* Spray **Chilled Rose Water**.
+* Let it air dry on the face.
 
-### 3. Hydrate
-* Apply fresh **Aloe Vera Gel** (or a good tube aloe gel without color/perfume).
+### 3. Oil-Free Hydration
+* Apply **99% Pure Aloe Vera Gel**.
+* *Tip:* Keep your Aloe Gel in the fridge. The cold constricts pores and reduces puffiness.
 
-### 4. The Firewall (Sunscreen) 🛡️
-* **Mineral Sunscreen (SPF 50)**.
-* *Critical:* This prevents the tan from coming back.
-
----
-
-## 🌙 Night Routine (Repair Phase)
-
-### 1. Oil Dissolve (Makeup/Sunscreen Removal)
-* Take **Almond Oil** or **Hemp Seed Oil**.
-* Massage on dry face to melt sebum and SPF.
-* Wipe off with a warm, damp cloth.
-* *Warning:* 🚫 NO Coconut Oil on face.
-
-### 2. The Second Wash 📦
-* Take **1 tsp from Jar A** + **Yogurt**.
-* Wash gently to remove the oil residue.
-
-### 3. The "Hero" Treatment (Follow Weekly Schedule)
-* Apply the specific mask for the night (recipes below).
-
-### 4. Under-Eye Magic
-* Dab **Almond Oil** or **Cold Milk** under eyes before sleeping.
+### 4. The Shield 🛡️
+* **Gel-Based or Mineral Sunscreen (SPF 50)**.
+* *Important:* Look for "Non-Comedogenic" on the label.
 
 ---
 
-## 📅 Weekly Schedule & Recipes
+## 🌙 Night Routine (Repair)
+
+### 1. The "Anti-Clog" Cleanse (Make-up/Sunscreen Removal)
+* **Step 1:** Dip a cotton pad in **Cold Raw Milk**. Wipe your face thoroughly.
+    * *Why:* Milk fats bind to dirt/makeup gently without adding pore-clogging grease.
+* **Step 2:** Wash with **Jar A + Water**.
+
+### 2. The Hydro-Massage (Instead of Oil)
+* Apply a thick layer of **Aloe Vera Gel**.
+* Massage face upwards for 5 minutes.
+* *Why:* This drains lymph fluids and gives you the "facial massage" glow without using a drop of oil.
+
+### 3. The Treatment (Follow Weekly Schedule)
+* Apply the specific mask for the night.
+
+### 4. Under-Eye Care
+* Place **Cucumber Slices** or **Cold Potato Slices** on eyes for 5 mins.
+* Rinse and sleep.
+
+---
+
+## 📅 Weekly Schedule
 
 | Day | Treatment | Instructions |
 | :--- | :--- | :--- |
-| **Mon** | **Detox Mask** | **Multani Mitti + Rose Water**. Mix until smooth. Apply. Wash when 80% dry (tacky, not cracking). |
-| **Tue** | **Polishing Scrub** 📦 | **1 tsp Jar B + Yogurt**. Massage gently for 60 secs. Rinse. (Softens texture). |
-| **Wed** | **Glow Mask** | **1 tsp Jar A + Tomato Pulp**. Squeeze fresh tomato juice into the powder. (Brightens tan). |
-| **Thu** | **Rest Night** | Just Cleanse + Rose Water + Sleep. |
-| **Fri** | **Hydration Bomb** | **Milk + Honey + Saffron**. Soak 2 strands of saffron in 1 tsp milk for 10 mins. Add honey. Apply liquid to face. |
-| **Sat** | **Soothing Mask** | **Plain Yogurt + Honey**. Mix and apply. Calms redness and irritation. |
-| **Sun** | **Deep Massage** | **Almond Oil**. Massage face upwards for 10 mins to drain puffiness. |
+| **Mon** | **Detox Mask** | **Multani Mitti + Rose Water**. (Sucks out deep impurities). Wash when 80% dry. |
+| **Tue** | **Soft Scrub** 📦 | **1 tsp Jar B + Yogurt**. Massage very gently. (Removes dead skin). |
+| **Wed** | **Brightening Mask** | **1 tsp Jar A + Potato Juice**. (The "Potato Hack" - see recipe below). |
+| **Thu** | **Rest Night** | Just Cleanse + Aloe Gel. |
+| **Fri** | **Soothing Mask** | **Sandalwood Powder + Rose Water**. (Calms any active breakouts). |
+| **Sat** | **Glass Skin Mask** | **Yogurt + Honey + Pinch of Turmeric**. (Hydrates without oil). |
+| **Sun** | **Ice Facial** | Wrap an ice cube in a handkerchief. Massage face for 2 mins to shrink pores. |
 
 ---
 
-## 📖 The Recipe Book (Reference)
+## 📖 The "Why" (Logic)
 
-You don't need to google anything. Here is the source code for every item mentioned above.
+#### 🥔 The Potato Hack (Replaces Tomato)
+* **How:** Grate a small piece of potato. Squeeze the juice into your Besan (Jar A).
+* **Why:** Potato contains an enzyme called *Catecholase*. It is a powerful natural bleach that removes tan and dark circles *without* the acidity that irritates sensitive skin.
 
-#### 🍅 The Tomato Pulp Hack
-* **How:** Cut a slice of tomato. Squeeze the juice/pulp directly into your palm with the besan.
-* **Why:** Contains Lycopene. It acts as a gentle bleach to remove tan safely.
+#### 🥛 The Raw Milk Cleanser (Replaces Oil)
+* **Why:** Since oils clog your pores, Milk is the perfect substitute. It contains natural lipids that dissolve surface dirt, but it washes off completely with water, leaving zero residue.
 
-#### 🥛 Saffron Milk (Kesar)
-* **How:** Keep a tiny shot glass in the bathroom. Put 1 tsp milk + 2 strands saffron. Let it sit while you brush your teeth. Apply it like a serum.
-* **Why:** The most expensive but most effective step for that "rich" glow.
-
-#### 🥣 Oatmeal Scrub (Jar B)
-* **Why:** Sugar tears the skin. Oatmeal contains *saponins* (soaps) and *beta-glucans* (healers). It buffs the skin without scratching it.
-
-#### 🧱 Multani Mitti (Clay)
-* **Safety Check:** Never let this dry fully! If it cracks, it sucks moisture OUT of your skin. Wash it while it feels cold and slightly sticky.
+#### 🧊 Aloe Vera Massage (Replaces Oil Massage)
+* **Why:** You can massage your face with gel just as well as oil. It provides the "slip" needed to sculpt the face, but it absorbs as water, leaving your skin hydrated and plump, not greasy.
 
 ---
 
 ## ✅ Final Safety Checks
 
-1.  **Patch Test:** If the Tomato mask stings, wash it off and use plain Yogurt instead.
-2.  **No Lemon:** Do not use lemon juice. It messes up your skin's pH and causes dark spots in the sun.
-3.  **Consistency:** Use the jars. If the mix is ready, you will actually do it.
+1.  **No Coconut/Almond/Sesame:** We have removed all oils. Your hydration comes from Aloe, Honey, and Yogurt.
+2.  **No Lemon/Tomato:** We use Potato and Turmeric for brightening. Zero stinging.
+3.  **Sanitize:** Since we aren't using strong cleansers, make sure your pillowcase is changed every 2-3 days to prevent clogging from dust.
 
-> *"Skin is an investment, not an expense."* ✨
+> *"Clear skin is about balance, not just products."* ✨
