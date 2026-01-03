@@ -1,7 +1,7 @@
-# DORM CUT PLAN (WITH RECIPES)
+# DORM CUT PLAN (MASTER FILE)
 
 **Cooking Schedule:** Sunday, Tuesday, Thursday  
-**Containers:** 3 (Rice Box, Chicken Box, Tiffin)  
+**Gear:** Induction, 1 Pot, 3 Containers (Rice Box, Chicken Box, Tiffin)  
 **Goal:** ~2200 kcal | ~180g Protein  
 
 ---
@@ -15,89 +15,79 @@
 - **Oats:** Small pack
 - **Curd:** 3 kg (or daily packets)
 - **Veggies:** Onions (1kg), Tomatoes (1kg), Cucumbers (5), Lemon
-- **Flavor:** Ginger-Garlic Paste (Large pack), **Everest/MDH Chicken Masala** (The box), Oil, Salt, Turmeric (Haldi), Chili Powder.
+- **Flavor:** Ginger-Garlic Paste, **Chicken Masala** (Everest/MDH Box), Oil, Salt, Chili Powder, Turmeric.
 
 ---
 
-## 👨‍🍳 THE "MAKE IT TASTY" RECIPES
+## 📅 THE COOKING SCHEDULE
 
-### 1. DORM ROOM MASALA CHICKEN (The Bulk Cook)
-*Cook this on Sunday & Thursday. Makes ~4 servings.*
+### 1. SUNDAY EVENING (Chicken Batch 1)
+*Cooks food for Mon, Wed, Thu Lunch*
+- **Pot:** Cook 1.2 kg Chicken (Recipe 1). Store in **Container B**.
+- **Pot:** Boil Rice (Recipe 2). Store in **Container A**.
 
-**Ingredients per batch:**
-- 1.2 kg Chicken Breast (cut into 1-inch cubes)
-- 3 Large Onions (Finely chopped)
-- 3 Tomatoes (Chopped small)
-- 2 tbsp Ginger-Garlic Paste
-- Spices: 1 tsp Haldi, 1 tsp Chili Powder, **3 tbsp Chicken Masala** (Be generous)
-- 2 tbsp Oil
-- Salt to taste
-- 1 Lemon
+### 2. TUESDAY MORNING (Veg Batch)
+*Cook fresh for the day*
+- **Pot:** Cook Soya + Paneer Mix (Recipe 3).
+- **Store:** Pack Lunch in Tiffin, put Dinner in a Bowl (covered) in fridge.
 
-**Steps:**
-1. **Heat:** Put pot on Induction (Medium heat - 800/1000W). Add oil.
-2. **The Base (Critical Step):** Add chopped onions. Fry them until they turn **Brown** (not pink, brown). This takes 8-10 mins. Do not skip this or chicken will taste bland.
-3. **Aromatics:** Add Ginger-Garlic paste. Stir for 1 minute until raw smell goes.
-4. **Masala:** Add tomatoes + Salt + Haldi + Chili + Chicken Masala. Cook until tomatoes are mushy and oil separates slightly.
-5. **Meat:** Dump in the chicken cubes. Mix well so every piece is coated in red masala.
-6. **Cook:** Add a *very small* splash of water (chicken releases its own water). Cover with lid.
-7. **Simmer:** Lower heat (400/600W). Let it cook for 15-20 mins.
-8. **Finish:** Check if chicken is soft. Squeeze 1 whole lemon on top. Mix. Done.
+### 3. THURSDAY EVENING (Chicken Batch 2)
+*Cooks food for Fri, Sat, Sun*
+- **Pot:** Cook 1.3 kg Chicken. Refill **Container B**.
+- **Pot:** Boil Rice. Refill **Container A**.
 
 ---
 
-### 2. PERFECT BOILED RICE (Batch Cook)
-*Cook this Sunday & Thursday (or Wed if you run out).*
+## ♨️ HOW TO REHEAT & PACK LUNCH (CRITICAL)
+*Cold rice from the fridge is hard and dry. You MUST reheat properly.*
 
-**Steps:**
-1. **Ratio:** 1 cup Rice = 2.5 cups Water.
-2. **Wash:** Rinse rice 3 times until water is clear (removes starch so it doesn't get sticky).
-3. **Boil:** Put rice and water in pot. Turn induction to High.
-4. **Simmer:** Once water starts boiling, turn induction to Low (200/400W). Cover with lid.
-5. **Wait:** Let it cook for 10-12 mins.
-6. **Check:** If water is gone and rice is fluffy, it's done.
+**Method 1: If you have a Common Microwave**
+1. Put chicken and rice in tiffin.
+2. Sprinkle roughly **2 tablespoons of water** over the rice (Do not skip this).
+3. Microwave for 2 minutes. The water turns to steam and makes the rice soft again.
 
----
+**Method 2: The Induction Pan Method (Your Setup)**
+1. **Heat:** Put your pot on the induction (Medium heat).
+2. **Liquid:** Add a very small splash of water (about 3-4 tbsp) to the empty pot. Let it sizzle.
+3. **Dump:** Throw in your portion of Cold Rice + Cold Chicken.
+4. **Steam:** Cover with the lid immediately. Let it steam for 2 minutes.
+5. **Mix:** Open lid, stir everything together. The rice should be fluffy now.
+6. **Pack:** Transfer to your tiffin.
 
-### 3. TUESDAY "ONE POT" VEG (Strict Veg)
-*Cook this fresh on Tuesday Morning (Takes 15 mins).*
-
-**Ingredients:**
-- 70g Soya Chunks (Dry weight)
-- 200g Paneer (Cubed)
-- 1 Onion, 1 Tomato, Ginger-Garlic paste
-- Kitchen King or Paneer Masala
-
-**Steps:**
-1. **Prep:** Boil water, soak Soya Chunks for 5 mins. **Squeeze them extremely hard** to remove water.
-2. **Fry:** In the pot, fry Onion + Ginger-Garlic + Tomato.
-3. **Spice:** Add Salt + Masala.
-4. **Mix:** Add Soya chunks and Paneer cubes. Stir fry for 5 mins.
-5. **Done:** Divide into Lunch (Tiffin) and Dinner (Bowl).
+*Pro-Tip:* Do this **before** making your breakfast oats so you don't have to wash the pot twice aggressively. Just rinse it after packing lunch, then make oats.
 
 ---
 
-## 📅 THE SCHEDULE
+## 👨‍🍳 THE RECIPES
 
-### SUNDAY EVENING (Chicken Batch 1)
-- Cook 1.2 kg Chicken (Recipe 1). Store in **Box B**.
-- Boil Rice (Recipe 2). Store in **Box A**.
+### 1. DORM ROOM MASALA CHICKEN (Bulk)
+*Ingredients: 1.2kg Chicken, 3 Onions, 3 Tomatoes, Ginger-Garlic Paste, Chicken Masala, Oil.*
+1. **Fry Base:** Heat oil. Fry chopped onions until **BROWN** (8-10 mins). This is where the flavor comes from.
+2. **Spice:** Add Ginger-Garlic paste + Tomatoes + Salt + Haldi + Chili + **3 tbsp Chicken Masala**. Cook until tomatoes melt.
+3. **Meat:** Add chicken. Mix well.
+4. **Simmer:** Add tiny splash of water. Cover lid. Low heat (600W) for 20 mins.
+5. **Finish:** Squeeze 1 whole lemon.
 
-### TUESDAY MORNING (Veg Batch)
-- Cook Soya + Paneer (Recipe 3).
-- Pack Lunch, Fridge Dinner.
+### 2. PERFECT BATCH RICE
+1. Wash rice 3 times.
+2. Add to pot with water (1 cup rice : 2.5 cups water).
+3. Boil on High until bubbling.
+4. Cover lid, switch to Low (400W). Timer: 12 mins.
+5. Fluff with fork before storing.
 
-### THURSDAY EVENING (Chicken Batch 2)
-- Cook 1.3 kg Chicken (Recipe 1). Refill **Box B**.
-- Boil Rice (Recipe 2). Refill **Box A**.
+### 3. TUESDAY "ONE POT" VEG
+*Ingredients: 70g Soya Chunks (soaked & squeezed), 200g Paneer, Onion, Tomato, Masala.*
+1. **Fry:** Oil + Onion + Tomato + Masala.
+2. **Mix:** Add Soya + Paneer.
+3. **Cook:** Stir fry 5 mins. Add splash of water to make it juicy.
 
 ---
 
 ## 🥘 DAILY MENU (NON-VEG DAYS)
 
 **Breakfast:** 5 Boiled Eggs + 60g Oats + Fruit
-**Lunch:** Chicken + Rice + Cucumber (From boxes)
-**Dinner:** Chicken + Rice + Curd (From boxes)
+**Lunch:** Chicken + Rice + Cucumber (Reheated & Packed)
+**Dinner:** Chicken + Rice + Curd (Heated in room)
 **Snack:** 1 Scoop Whey + Water
 
 ---
@@ -107,3 +97,10 @@
 **Breakfast:** Whey + Oats + Banana (No Eggs)
 **Lunch:** Soya-Paneer Mix + Rice + Cucumber
 **Dinner:** Soya-Paneer Mix + Rice + Curd
+
+---
+
+## ⚠️ SURVIVAL RULES
+1. **The Cucumber Rule:** You must eat the cucumber with lunch. No roti = less fiber. If you skip salad, you will get constipated.
+2. **Water:** Drink 4 Liters. High protein dehydrates you.
+3. **Spoilage:** If chicken smells sour or slimy on Thursday, throw it out. (Keep fridge setting to 'Coldest').
